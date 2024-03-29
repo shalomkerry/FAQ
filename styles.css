@@ -12,6 +12,7 @@ body {
 body {
   background-image: linear-gradient(#af67e9, #6565e7);
   background-repeat: no-repeat;
+  font-family: "Kumbh Sans";
 }
 /*
 ===============================
@@ -21,11 +22,10 @@ SIZING AND ALIGNING
 .card {
   width: 95%;
   max-width: 920px;
-  height: 510px;
+  height: 560px;
   background-color: #ffff;
   border-radius: 25px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   position: absolute;
   top: 50%;
@@ -43,6 +43,9 @@ SIZING AND ALIGNING
   overflow: hidden;
 }
 /************ images **********/
+.mobile {
+  display: none;
+}
 .lady {
   width: 450px;
   position: relative;
@@ -50,7 +53,8 @@ SIZING AND ALIGNING
   top: 100px;
 }
 .box {
-  width: 200px;
+  width: 80%;
+  max-width: 200px;
   position: absolute;
   left: -100px;
   top: 210px;
@@ -62,15 +66,114 @@ SIZING AND ALIGNING
   width: 100%;
   margin-left: 1.2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 /*
 ===============================
 STYLING FAQ
 ===============================
 */
+article {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  user-select: none;
+}
 .header {
-  margin-bottom: 1.6rem;
   font-size: 40px;
+  margin: 50px 0 30px;
+}
+.accordion {
+  margin-top: 20px;
+}
+.accordionHeader {
+  display: flex;
+  cursor: pointer;
+  font-size: 15px;
+  justify-content: space-between;
+}
+.accordionItemBodyContent {
+  width: 80%;
+  padding: 15px 0 5px;
+}
+.accordionHeader.active {
+  font-weight: 700;
+}
+.accordionHeader:hover {
+  color: #f47b56;
+}
+
+.accordionHeader::after {
+  content: url("./images/icon-arrow-down.svg");
+  transition: transform(2s);
+  transition: transform 0.2s ease-in;
+}
+.accordionHeader.active::after {
+  content: url("./images/icon-arrow-down.svg");
+  transform: rotate(180deg);
+}
+.accordionItemBody {
+  width: 360px;
+  max-height: 0;
+  overflow: hidden;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+  border-image: linear-gradient(to right, #d4d3d2, #d4d3d2) 1;
+  transition: max-height 0.4s ease-out;
+}
+.answer {
+  font-size: 12px;
+}
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  .card {
+    flex-direction: column;
+    width: 90vw;
+    height: 600px;
+    overflow: visible;
+    margin-top: 50px;
+  }
+  .card__images {
+    width: 100%;
+    background-image: none;
+    height: 30%;
+    overflow: visible;
+  }
+  .card__faq {
+  }
+  .box,
+  .lady {
+    display: none;
+  }
+  .mobileview {
+    display: flex;
+    justify-content: center;
+  }
+  .mobile {
+    display: block;
+    width: 280px;
+    position: absolute;
+    top: -120px;
+  }
+  .backgroundmobile {
+    height: 130px;
+  }
+  .header {
+    margin: 0 0 10px;
+    text-align: center;
+  }
+  .article {
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    width: 90%;
+  }
+  .accordion {
+    padding: 0 10px;
+  }
+  .accordionItemBody {
+    width: 100%;
+    min-width: 200px;
+  }
 }

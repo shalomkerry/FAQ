@@ -19,7 +19,7 @@
     <main>
       <div class="card">
         <div class="card__images">
-          <figure>
+          <figure class="desktop">
             <img
               src="./images/illustration-box-desktop.svg"
               alt="box"
@@ -31,49 +31,92 @@
               alt="women"
             />
           </figure>
+          <figure class="mobileview">
+            <img
+              src="./images/illustration-woman-online-mobile.svg"
+              alt="lady mobile"
+              class="mobile"
+            />
+            <img
+              src="./images/bg-pattern-mobile.svg"
+              alt="mobile-image-background"
+              class="backgroundmobile"
+            />
+          </figure>
         </div>
         <div class="card__faq">
           <article>
             <h1 class="header">FAQ</h1>
-            <section class="questions">
-              <h2>How many team members can I invite?</h2>
-              <p>
-                You can invite up to 2 additional users on the Free plan. There
-                is no limit on team members for the Premium plan.
-              </p>
-            </section>
-
-            <section class="questions">
-              <h1>What is the maximum file upload size?</h1>
-              <p>
-                No more than 2GB. All files in your account must fit your
-                allotted storage space.
-              </p>
-            </section>
-            <section class="questions">
-              <h2>How do I reset my password?</h2>
-              <p>
-                Click “Forgot password” from the login page or “Change password”
-                from your profile page. A reset link will be emailed to you.
-              </p>
-            </section>
-            <section class="questions">
-              <h2>Can I cancel my subscription?</h2>
-              <p>
-                Yes! Send us a message and we’ll process your request no
-                questions asked.
-              </p>
-            </section>
-            <section class="questions">
-              <h2>Do you provide additional support?</h2>
-              <p>
-                Chat and email support is available 24/7. Phone lines are open
-                during normal business hours.
-              </p>
-            </section>
+            <div class="accordion">
+              <div class="accordionHeader">
+                <p>How many team members can I invite?</p>
+              </div>
+              <div class="accordionItemBody">
+                <div class="accordionItemBodyContent">
+                  <p class="answer">
+                    You can invite up to 2 additional users on the Free plan.
+                    There is no limit on team members for the Premium plan.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordionHeader">
+                <p>How do I reset my password?</p>
+              </div>
+              <div class="accordionItemBody">
+                <div class="accordionItemBodyContent">
+                  <p class="answer">
+                    Click “Forgot password” from the login page or “Change
+                    password” from your profile page. A reset link will be
+                    emailed to you.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordionHeader">
+                <p>Can I cancel my subscription?</p>
+              </div>
+              <div class="accordionItemBody">
+                <div class="accordionItemBodyContent">
+                  <p class="answer">
+                    Yes! Send us a message and we’ll process your request no
+                    questions asked.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordionHeader">
+                <p>How many team members can I invite?</p>
+              </div>
+              <div class="accordionItemBody">
+                <div class="accordionItemBodyContent">
+                  <p class="answer">
+                    You can invite up to 2 additional users on the Free plan.
+                    There is no limit on team members for the Premium plan.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordionHeader">
+                <p>Do you provide additional support?</p>
+              </div>
+              <div class="accordionItemBody">
+                <div class="accordionItemBodyContent">
+                  <p class="answer">
+                    Chat and email support is available 24/7. Phone lines are
+                    open during normal business hours.
+                  </p>
+                </div>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </main>
+    <script src="./main.js"></script>
   </body>
 </html>
