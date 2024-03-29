@@ -121,7 +121,9 @@ article {
   transition: max-height 0.4s ease-out;
 }
 .answer {
-  font-size: 12px;
+  font-weight: 200;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
 }
 @media (max-width: 768px) {
   body {
